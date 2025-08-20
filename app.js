@@ -88,7 +88,19 @@ function addEventListeners() {
             });
         });
     }
+    // Mobile button controls
+    const upBtn = document.getElementById('upBtn');
+    const downBtn = document.getElementById('downBtn');
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+
+    if (upBtn) upBtn.addEventListener('click', () => changeDirection('UP'));
+    if (downBtn) downBtn.addEventListener('click', () => changeDirection('DOWN'));
+    if (leftBtn) leftBtn.addEventListener('click', () => changeDirection('LEFT'));
+    if (rightBtn) rightBtn.addEventListener('click', () => changeDirection('RIGHT'));
+
 }
+
 
 // Handle keyboard input
 function handleKeyPress(e) {
